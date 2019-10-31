@@ -1,5 +1,5 @@
 package com.cc;
-
+//aaaaa
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 public class Servlet extends javax.servlet.http.HttpServlet {
@@ -11,6 +11,7 @@ public class Servlet extends javax.servlet.http.HttpServlet {
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-                       doPost(req,res);
+                       doPost(request,respons
+);
     }
 }

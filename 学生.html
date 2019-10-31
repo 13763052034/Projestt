@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function () {
+            var leftNum = document.getElementById("div01").offsetLeft;
+            var dd = document.getElementById("div01").offsetTop;
+            document.onkeydown = function (event) {
+                var e = event || event.window;
+                if (e && e.keyCode === 37) {
+                    if (leftNum - 20 >= 0) {
+                        leftNum -= 20;
+                        document.getElementById("div01").style.left = leftNum + "px";
+                    }
+                } else if (e && e.keyCode === 38) {
+                    if (dd - 20 >= 0) {
+                        dd -= 20;
+                        document.getElementById("div01").style.top = dd + "px";
+                    }
+                } else if (e && e.keyCode === 39) {
+                    if (leftNum <= 1140) {
+                        leftNum += 20;
+                        document.getElementById("div01").style.left = leftNum + "px";
+                    }
+                } else if (e && e.keyCode === 40) {
+                    if (dd <= 540) {
+                        dd += 20;
+                        document.getElementById("div01").style.top = dd + "px";
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .container{
+            width:1200px;
+            height:600px;
+            background-color:lightblue;
+            margin:50px auto;
+            position: relative;
+            box-shadow: -46px 16px 5px 0px rgba(0,0,0,0.4);
+        }
+        #div01{
+            width:40px;
+            height:40px;
+            position: absolute;
+            left:580px;
+            top:280px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="div01"></div>
+</div>
+</body>
+</html>

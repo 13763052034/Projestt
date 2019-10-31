@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <style>
+       div{
+           position: absolute;
+           width:200px;
+           height:200px;
+           background-color: red;
+       }
+   </style>
+</head>
+<body>
+<button class="con">动起来</button>
+<button>飞起来</button>
+<div></div>
+<script>
+    $(function () {
+        $('.con').click(function () {
+            $('div').animate({
+                    left:600,
+                    top:500,
+                  opacity:.6
+                },1000)
+        })
+        })
+
+</script>
+</body>
+</html>

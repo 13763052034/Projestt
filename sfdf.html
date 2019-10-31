@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="diqi.js" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function show_java() {
+            $.get('./cc',function (msg) {
+                alert(msg);
+            },'xml');
+        }
+        $(function () {
+            show_java();
+        });
+    </script>
+</head>
+<body>
+<h2>地区三级联动</h2>
+省份:
+<select id="rr">
+  <option >--请选择--</option>
+</select>&nbsp;&nbsp;
+城市:
+<select in="city">
+    <option value="0">--请选择--</option>
+</select>
+地区:&nbsp;&nbsp;
+<select in="area">
+    <option value="0">--请选择--</option>
+</select>&nbsp;&nbsp;
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function check() {
+            var emi=document.getElementById("emi").value;
+            if(emi==""){
+                alert("地址不能为空");
+                return false;
+            }else if(emi.indexOf("@")==-1){
+                alert("地址格式错误")
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="http://localhost:8080/untitled7/Servlet" method="get" onsubmit="return check()">
+    用户名:<input type="text" id="emi" name="uname" value="nn"/><br/>
+    密码:<input type="password" name="paw" value="pann"/><br/>
+    <input type="submit"  value="登录"/>
+    <div>
+        <dt>所在地区</dt>
+        <dd><select id="pro" name="proi">
+            <option value="">请选择</option>
+            <option value="1">北京</option>
+            <option value="2">山东</option>
+            <option value="3">河北</option>
+            <option value="4">广东</option>
+            <option value="5">广西</option>
+        </select>
+            <span id="se" class="msg"></span></dd>
+        <dd><select id="sw" name="wer">
+            <option value="">请选择</option>
+            <option value="1">北京</option>
+            <option value="2">山东</option>
+            <option value="3">河北</option>
+            <option value="4">广东</option>
+            <option value="5">广西</option>
+        </select>
+            <span id="proo" class="msg"></span></dd>
+    </div>
+</form>
+</body>
+</html>

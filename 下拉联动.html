@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var jiangsu="南京市：秦淮市、建邺市、鼓楼市、栖霞市、雨花台市、江宁市、浦口市、六合市、溧水市、\
+                     常州市:天宁区、钟楼区、新北区、武进区、金坛区\
+                     广州市:越秀区、荔湾区、海珠区、天河区、白云区、黄埔区、番禺区、花都区、南沙区、增城区、从化区\
+                     扬州市:广陵区、邗江区、江都区、仪征市、高邮市、宝应县";
+        var zhejiang="杭州市:西湖区、上城区、下城区、江干区、拱墅区\
+                      宁波市:海曙区、江北区、北仑区、镇海区、鄞州区、奉化区\
+                      温州市:辖鹿城市、龙湾市、瓯海市、洞头市\
+                      嘉兴市:海宁市、平湖市、桐乡市、南湖区、秀洲区";
+        var shandong="济南市:市中区、槐荫区、天桥区、历城区、长清区、章丘区、济阳区、莱芜区\
+                      威海市:文登市、荣成市、乳山市、环翠区\
+                      泰安市:泰山区、岱岳区、新泰市、肥城市、宁阳县";
+        window.onload=function(){
+
+           var chai= getAll()
+        };
+        function getAll() {
+            var allshangdong=new Map();
+            allshangdong.set("江苏",str(jiangsu));
+            allshangdong.set("江苏",str(zhejiang));
+            allshangdong.set("江苏",str(shandong));
+            return allshangdong;
+
+        }
+        function str(provinceStr) {
+            var oneprov=new Map();
+            var cityArray=provinceStr.split(" ");
+            cityArray.forEach((element,index,array)=>{
+                if(element.length!=0){
+                    var oneCity=element.split(":");
+                    oneprov.set(oneCity[0],oneCity[1].split("、"));
+                }
+            });
+          console.log(oneprov);
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

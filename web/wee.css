@@ -1,0 +1,35 @@
+body{
+    /*background-image: url(ss/ing.jpg);
+    background-repeat: no-repeat;
+
+    background-position: center top;
+    background-attachment: fixed;
+    background-size:500px;*/
+   /* background:url(ss/ing.jpg) no-repeat fixed center top;*/
+
+}
+ul,ol{
+   list-style-type: none;
+
+}
+*{
+margin: 0;
+    padding: 0;
+}
+#rr h3{
+    height: 48px;
+    background: aquamarine;
+    line-height: 48px;
+
+}
+#rr{
+    height: 200px;
+    width: 200px;
+    border:1px solid gray;
+    margin:0 auto;
+
+}
+#rr ul li{
+    line-height: 20px;
+    border-bottom: 1px dashed gray;
+}
